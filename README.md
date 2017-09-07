@@ -1,10 +1,8 @@
-Horizontal Timeline
+Horizontal Timeline Bibliotheekportalen
 =========
 
-An easy to customize, horizontal timeline powered by CSS and jQuery.
+Forked from Codyhouse's project.
 
 [Article on CodyHouse](http://codyhouse.co/gem/horizontal-timeline/)
 
-[Demo](https://codyhouse.co/demo/horizontal-timeline/index.html)
- 
 [Terms](http://codyhouse.co/terms/)
