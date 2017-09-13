@@ -346,6 +346,9 @@ bullet {
     list-style-type: disc;
     margin-left: 1vw;
 }
+strike {
+    text-decoration: line-through;
+}
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
