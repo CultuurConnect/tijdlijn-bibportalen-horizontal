@@ -338,7 +338,7 @@ box-shadow: 6px 5px 8px 0px rgba(131, 111, 111, 0.35);
     margin-right: 2vw;
     margin-top: -1vh;
 }
-.mbmobile {
+.mbmobile, .wunder {
     -webkit-box-shadow: 0px 0px 0px 0px rgba(131, 111, 111, 0.35) !important;
 -moz-box-shadow: 0px 0px 0px 0px rgba(131, 111, 111, 0.35) !important;
 box-shadow: 0px 0px 0px 0px rgba(131, 111, 111, 0.35) !important;
