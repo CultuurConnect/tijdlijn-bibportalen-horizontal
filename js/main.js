@@ -318,59 +318,59 @@ jQuery(document).ready(function($){
     }
     });
     
-    // The interval id for the auto-slider if currently running.
-    var intervalId;
-    // The current slide index
-    var current = 0;
-    // Query document for the DOM nodes
-    var items = $('.events a');
-
-    // Clicks on `a` will bubble up to their `li` element and then to `div.events`.
-    // We can use this to listen to the click on li and then see which one was
-    // targeted.
-    $('.events').on('click', 'li', function(event) {
-      // If the third `li` was clicked, there are 2 in front of it so 2 is the index
-      // of the item that was clicked.
-      var count = $(this).prevAll('li').length;
-
-      // Update the current item based on the clicked element.
-      current = count;
-
-      // Reset the interval so the next slide does not occur immediately after the
-      // user has clicked.
-      if (intervalId != null) {
-        // Clear previous auto-play
-        clearInterval(intervalId);
-        // And start a new one which will first trigger 8000ms from now.
-        intervalId = timeLineAutoPlay();
-      }
-    });
-
-    function timeLineAutoPlay() {
-      // Return the interval id so that we can can cancel it later.
-      return setInterval(function() {
-        // Increment `current` but wrap at `items.length`, thus looping through the
-        // list of items.
-        //
-        // E.g. for 4 items; items.length === 4:
-        //   current : 0 -> 1 -> 2 -> 3 -> 0 -> 1 -> ...
-        current = (current + 1) % items.length;
-
-        // Get the item at the current index
-        var item = items.eq(current);
-
-        // This would lead to multiple interval loops being spawned whenever we
-        // reach 11. That seems unintentional.
-        //
-        // if (current == 11) {
-        //   timeLineAutoPlay();
-        // }
-
-        item.trigger('click');
-      }, 5500);
-    }
-
-    // Start the initial auto-slide and store the id
-    intervalId = timeLineAutoPlay();
+//    // The interval id for the auto-slider if currently running.
+//    var intervalId;
+//    // The current slide index
+//    var current = 0;
+//    // Query document for the DOM nodes
+//    var items = $('.events a');
+//
+//    // Clicks on `a` will bubble up to their `li` element and then to `div.events`.
+//    // We can use this to listen to the click on li and then see which one was
+//    // targeted.
+//    $('.events').on('click', 'li', function(event) {
+//      // If the third `li` was clicked, there are 2 in front of it so 2 is the index
+//      // of the item that was clicked.
+//      var count = $(this).prevAll('li').length;
+//
+//      // Update the current item based on the clicked element.
+//      current = count;
+//
+//      // Reset the interval so the next slide does not occur immediately after the
+//      // user has clicked.
+//      if (intervalId != null) {
+//        // Clear previous auto-play
+//        clearInterval(intervalId);
+//        // And start a new one which will first trigger 8000ms from now.
+//        intervalId = timeLineAutoPlay();
+//      }
+//    });
+//
+//    function timeLineAutoPlay() {
+//      // Return the interval id so that we can can cancel it later.
+//      return setInterval(function() {
+//        // Increment `current` but wrap at `items.length`, thus looping through the
+//        // list of items.
+//        //
+//        // E.g. for 4 items; items.length === 4:
+//        //   current : 0 -> 1 -> 2 -> 3 -> 0 -> 1 -> ...
+//        current = (current + 1) % items.length;
+//
+//        // Get the item at the current index
+//        var item = items.eq(current);
+//
+//        // This would lead to multiple interval loops being spawned whenever we
+//        // reach 11. That seems unintentional.
+//        //
+//        // if (current == 11) {
+//        //   timeLineAutoPlay();
+//        // }
+//
+//        item.trigger('click');
+//      }, 7000);
+//    }
+//
+//    // Start the initial auto-slide and store the id
+//    intervalId = timeLineAutoPlay();
 
 });
